@@ -1,0 +1,47 @@
+program{
+    int x, y, z, suma;
+    float a, b, c;
+    bool flag;
+
+    suma = 45;
+    x = 32;
+
+    x = 23;
+    y = 2 + 3 - 1;
+    z = y + 7;
+    y = y + 1;
+
+    a = 24.0 + 4.0 - 1.0 / 3.0 * 2.0 + 34.0 - 1.0; 
+    x = (5 - 3) * (8 / 2);
+    y = 5 + 3 - 2 * 4 / 7 - 9;
+    z = 8 / 2 + 15 * 4;
+    y = 14; 
+
+    if(2 > 3) then{
+        y = y + 3;
+    } else{
+        if(4 > 2 and flag) then {
+            b = 3.2;           
+        } else {
+            b = 5.0;
+        }
+        fi
+        y = y + 1;
+    }
+    fi
+
+    a = a + 0.0;
+
+    x = 3 + 4;
+
+    do{
+        y = (y + 1) * 2 + 1;
+    }until(y == 5);
+
+    while(y == 0){
+        read y;
+        write x;
+    }
+}
+
+

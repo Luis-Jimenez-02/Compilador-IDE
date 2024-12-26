@@ -1,0 +1,13 @@
+program{
+    int a,b,c;
+    read a;
+    read b;
+
+    c = (a + b) ^ 2/3;
+
+    write "resultado:", c;
+}
+
+
+
+

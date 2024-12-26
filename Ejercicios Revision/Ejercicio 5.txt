@@ -1,0 +1,52 @@
+program{
+    int numeroFabricas, fabricaMasProdujo, fabricaActual, fabricaConJulio, mes;
+    int totalAnual, produccionMensual, maxProduccion, produccionJulio;
+
+    fabricaMasProdujo = 0;
+    maxProduccion = 0;
+    fabricaActual = 0;
+    fabricaConJulio = 0;
+    produccionJulio = 0;
+
+    read numeroFabricas;
+
+        fabricaActual = 1;
+        do{
+	    totalAnual = 0;
+            mes = 1;
+
+            write "Ingrese la produccion para la fabrica", fabricaActual;
+	    do{
+		read produccionMensual;
+                totalAnual = totalAnual + produccionMensual;
+	        
+                if(mes == 7)then{
+		    produccionJulio = produccionMensual;
+		}fi
+		
+		mes = mes + 1;
+	    }until(mes > 12);
+
+	    if(totalAnual > maxProduccion)then{
+		maxProduccion = totalAnual;
+                fabricaMasProdujo = fabricaActual;
+	    }fi
+
+	    if(produccionJulio > 3000000)then{
+		write "Esta fabrica paso de 3,000,000 en julio!!!";
+		write fabricaActual;
+	    }fi
+
+	    write "El total anual de esta fabrica es de: ", totalAnual;
+
+   	    fabricaActual = fabricaActual + 1;
+
+        }until(fabricaActual > numeroFabricas);
+
+	write "La fabrica que mas produccion tuvo fue la: ", fabricaMasProdujo;
+	write "Con una produccion de: ", maxProduccion;
+}
+
+
+
+

@@ -1,0 +1,52 @@
+program{
+    int voto, votos1, votos2, votos3, votos4, totalVotos;
+    int p1, p2, p3, p4;
+
+    votos1 = 0;
+    votos2 = 0;
+    votos3 = 0;
+    votos4 = 0;
+    totalVotos = 0;
+
+    do{
+        read voto;
+        
+        if(voto == 1)then{
+            votos1 = votos1 + 1;
+            totalVotos = totalVotos + 1;
+        }fi
+        
+        if(voto == 2)then{
+            votos2 = votos2 + 1;    // Corregido de votos1 a votos2
+            totalVotos = totalVotos + 1;
+        }fi
+        if(voto == 3)then{
+            votos3 = votos3 + 1;    // Corregido de votos1 a votos3
+            totalVotos = totalVotos + 1;
+        }fi
+        if(voto == 4)then{
+            votos4 = votos4 + 1;    // Corregido de votos1 a votos4
+            totalVotos = totalVotos + 1;
+        }fi
+        
+        if(voto == 0)then{          // Agregar condición de salida
+            break;
+        }fi
+    }until(voto == 0);             // Cambiado a comparación directa
+    
+    p1 = votos1 * 100 / totalVotos;
+    p2 = votos2 * 100 / totalVotos;
+    p3 = votos3 * 100 / totalVotos;
+    p4 = votos4 * 100 / totalVotos;
+
+    write "votos para candidato 1: ", votos1;
+    write "porcentaje del candidato 1:", p1;
+    write "votos para candidato 2: ", votos2;
+    write "porcentaje del candidato 1:", p2;
+    write "votos para candidato 3: ", votos3;
+    write "porcentaje del candidato 1:", p3;
+    write "votos para candidato 4: ", votos4;
+    write "porcentaje del candidato 1:", p4;
+}
+
+
